@@ -17,8 +17,7 @@ clang -std=c11 -fPIC -c -I./godot_headers src/modio_wrapper.c -o src/modio_wrapp
 clang -shared src/modio_wrapper.os -L. -lmodio -o ./bin/libmodio_wrapper.so
 ```
 
-This creates the file `libmodio_wrapper.so` in your `demo/bin/x11` directory.
-For windows you need to find out what compiler flags need to be used, I don't know which ones. (If you do, feel free to fork and update this project and README)
+This creates the file `libmodio_wrapper.so` in your `bin/` directory.
 
 ### Mac OS X
 
