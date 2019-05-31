@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "modio_c.h"
+#include "ModioC.h"
 
 const godot_gdnative_core_api_struct *api = NULL;
 const godot_gdnative_ext_nativescript_api_struct *nativescript_api = NULL;
@@ -58,7 +58,7 @@ void *modio_wrapper_constructor(godot_object *p_instance, void *p_method_data) {
     user_data_struct *user_data = api->godot_alloc(sizeof(user_data_struct));
 
     modioInit(MODIO_ENVIRONMENT_TEST, 7, (char *)"e91c01b8882f4affeddd56c96111977b", NULL);
-
+    
     strcpy(user_data->data, "Hello mod.io wrapper!");
 
     return user_data;
